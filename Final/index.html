@@ -1,0 +1,104 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Furniture repairs</title>
+<!-- content=ширина сайта равна ширине нашего девайса, а мштаб = 1 -->
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<meta name="keywords" content="Furniture, repairs">
+<meta name="description" content="Furniture, repairs">
+<link href="css/style.css" rel="stylesheet"/>
+
+<!-- Подключяем JQuery к сайту для слайдера -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/slider.js"></script>
+
+</head>
+<body>
+<!--<div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.
+	Чтобы не описывать каждый раз стиль внутри тега, можно выделить стиль во внешнюю таблицу стилей, а для тега добавить атрибут class или id с именем селектора. -->
+	<div class="wrapper">
+		<header>
+			<h1><a href="index.html">Furniture</a></h1>
+			<span class="tel">079-123-45-67</span>
+			<nav>
+				<ul>
+					<li><a href="contact.html" title="contact">contact</a></li>
+					<li><a href="portfolio.html" title="portfolio">portfolio</a></li>
+					<li><a href="services.html" title="services">services</a></li>
+					<li><a href="about.html" title="about">about</a></li>
+					<li class="current"><a href="index.html" title="home">home</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="slider-block">
+			<div class="flexslider">
+				<ul class="slides">
+					<li><img src="img/furniture.png" alt="furniture"></li>
+					<li><img src="img/furniture1.png" alt="furniture"></li>
+					<li><img src="img/furniture2.png" alt="furniture"></li>
+					<li><img src="img/furniture3.png" alt="furniture"></li>
+				</ul>
+			</div>
+			<div class="text">
+				<p>
+					Some cool text
+				</p>
+				<p class="text">
+					Some cool text
+				</p>
+				<a href="index.html" class="started">Get stared</a>
+			</div>
+		</div>
+		<ul class="blurbs">
+				<li class="one">
+					<h3>Some big text</h3>
+					<p>Some text</p>
+				</li>
+				<li class="two">
+					<h3>Some big text</h3>
+					<p>Some text</p>
+				</li>
+				<li class="three">
+					<h3>Some big text</h3>
+					<p>Some text</p>
+				</li>
+			</ul>	
+		</div>
+		<div class="maps">
+			<li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d807.4928342423243!2d37.53405378447658!3d47.09767252285055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1485374131030&key=AIzaSyB6JPb1yyfIMbA7phygbdGSAGPQs2kudo0" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe></li>
+		</div>
+		<div class="contact">
+			<form action="register.php" method="post">
+	    <fieldset>
+	        <div class="form-group">
+	            <input autocomplete="off" autofocus class="form-control" name="user_login" placeholder="user_login" type="text" required/>
+	        </div>
+	        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password" required/>
+        </div>
+	        <div class="form-group">
+	            <button class="btn btn-default" type="submit">
+	                <span aria-hidden="true" class="glyphicon glyphicon-submit"></span>
+	                Register
+	            </button> 
+	      
+	        </div>
+	    </fieldset>
+	</form>
+<footer>
+	<div class="end">
+		<div class="point">
+			<span class="glyphicon glyphicon-map-marker" aria-hidden="true">
+			</span>
+			<p>
+				Mariupol. Don.obl. UA 
+				<p>&reg;Sergey Bobrov</p>
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+

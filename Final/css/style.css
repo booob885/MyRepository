@@ -1,0 +1,421 @@
+/* адаптация к мобильным устройствам*/
+@media screen and (max-width: 1280px) { div.contentblock {width: 1200px;} } 
+@media screen and (max-width: 1140px) { div.contentblock {width: 1024px;} } 
+@media screen and (max-width: 992px) { div.contentblock {width: 970px;} }  
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*Для списка отменяем маркеры*/
+ul{
+  list-style: none;
+}
+
+/*Для ссылок отменяем подчеркивание*/
+a{
+text-decoration: none;
+color: #ffffff;
+position: relative;
+}
+
+
+body{
+	font-family: sans-serif;
+  background-color:#644a31;
+}
+
+.wrapper{
+  /*указали макс ширину, сделали для адаптации к гаджетам*/
+  margin: 0 auto;
+  width: 100%;
+
+}
+.text {
+  background-color: #b3ce59;
+}
+
+        /*HEADER BEGIN*/
+header{
+  background-color:#644a31;
+  min-height: 90px;
+  position: relative;
+}
+/*надпись фурнитуре*/
+  header h1 a{
+    float:left;
+    margin: 20px 0 0 40px;
+    font-family: 'JosefinSans-Regular';
+    color: #ffffff;
+}
+
+.tel{
+  padding: 3px 27px 3px 95px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  float: right;
+}
+
+nav{
+  float: right;
+  /*т.к. nav оптекает"tel" задаем:*/
+  clear: right;
+  background-color:#644a31;  
+}
+
+nav li{
+  float: right;
+  margin: 20px 30px 20px 5px;
+}
+
+nav li a{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding:  3px 15px;
+}
+/*При наведении появляется бэкграунд
+  Убираем border, т к при добавлении изменится ширина,
+  будет некрасиво
+*/
+nav li a:hover{
+background-color: #ff3000;
+  color: #ffffff;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+nav li.current a{
+  background-color: #ff3000;
+  
+  color: #ffffff;
+  border: 1px solid #596442;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+        /*HEADER END*/
+@font-face{
+  font-family: 'JosefinSans-Regular';
+    src:url(../fonts/JosefinSans-Regular.ttf) format('truetype');
+
+}
+
+/*Фон за слайдером*/
+.slider-block{
+  /*background: url(../img/fon.png) no-repeat 50% 0;*/
+  background-color: #b3ce59;
+  height: 332px;
+  padding: 85px 0 0;
+  color: #fff;
+  font-size: 29px;
+  font-family: 'JosefinSans-Regular';
+}
+        /*BEGIN SLIDER*/
+/*обьявляем свой шрифт*/
+
+
+
+
+/*скопирайтили со скачаного flaxslider.css*/
+.flexslider {
+  
+  background: #fff;
+  /*border: 4px solid #fff;*/
+  position: relative;
+  zoom: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  float: right;
+  width: 396px;
+  height: 268px;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.flexslider .slides img {
+  height: auto;
+  -moz-user-select: none;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.carousel li {
+  margin-right: 5px;
+}
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+ /*убрали какойто контент?*/
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+.flex-direction-nav a.flex-next:before {
+  /**/
+}
+.flex-direction-nav .flex-prev {
+  left: -50px;
+  /**/
+  text-indent: 9999px;
+  /*стрелочка*/
+  background: url(../img/arrow_Left.png) no-repeat 0 0;
+}
+.flex-direction-nav .flex-next {
+  right: -50px;
+  /*text-align: right;*/
+  text-indent: 9999px;
+  /*стрелочка*/
+  background: url(../img/arrow_Right.png) no-repeat 0 0;
+}
+
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+  opacity: 1;
+}
+.flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+  z-index: -1;
+}
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  /**/
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+.flex-control-paging li a.flex-active {
+  background: #000;
+  /*делаем белый*/
+  background: rgba(255, 255, 255, 0.9);
+  cursor: default;
+}
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+
+/*ниже слфйдера:*/
+.blurbs{
+  background: #644a31;
+  padding: 35px 40px 22px 40px;
+}
+
+.blurbs li{
+  float: left;
+  padding: 12px 200px 12px 200px;
+}
+
+.blurbs h3{
+  font-size: 15px;
+  color: #7a0e0d;
+}
+
+.blurbs:after{
+content: '';
+display: table;
+clear: both;
+}
+
+/*изображения*/
+.blurbs li.one{
+background: url(../img/facebook.png) no-repeat 0 50%;
+}
+
+.blurbs li.two{
+background: url(../img/twitter.png) no-repeat 0 50%;
+}
+
+.blurbs li.three{
+background: url(../img/rss.png) no-repeat 0 50%;
+}
+
+.maps {
+  text-align: center;
+}
+
+.contact{
+  text-align: center;
+}
+
+button {
+    color: #009f09;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    -o-border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.form-control {
+    color: #009f09;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    -o-border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+}
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+.end{
+  background-color: #525252;
+  color: #ffffff;
+  text-align: center;
+  font-family: sans-serif;
+    font-size: 18px;
+
+}
+/*Адаптируем к мобильным устройствам*/
+@media (max-width: 992px){
+
+  .wrapper{
+    width: 100%;
+  }
+
+.text{
+  display: none;
+}
+}
+        /*END SLIDER
